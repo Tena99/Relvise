@@ -1,0 +1,247 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:regular,500,600,700,800&display=swap);
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+* ::before,
+* ::after {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+* a {
+  text-decoration: none;
+}
+* ul,
+* ol,
+* li {
+  list-style: none;
+  padding: 0;
+}
+* img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+html,
+body {
+  height: 100%;
+  line-height: 1;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: "Montserrat";
+  color: #252b42;
+}
+
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1046px;
+  margin: auto;
+  padding: 0 15px;
+  box-sizing: content-box;
+}
+
+.ibg {
+  position: relative;
+}
+.ibg img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 50;
+}
+header .logo {
+  color: inherit;
+  font-size: 24px;
+  line-height: 133.3333333333%;
+  font-weight: 700;
+  letter-spacing: 0.1px;
+  margin-right: 132px;
+}
+@media screen and (max-width: 992px) {
+  header .logo {
+    margin-right: 80px;
+  }
+}
+@media screen and (max-width: 767px) {
+  header .logo {
+    margin-right: 40px;
+  }
+}
+@media screen and (max-width: 428px) {
+  header .logo {
+    margin-right: 20px;
+  }
+}
+header .header_container {
+  display: flex;
+  align-items: center;
+  min-height: 104px;
+}
+header .menu {
+  padding: 5px 0;
+}
+header .menu__list {
+  display: flex;
+  flex-wrap: wrap;
+}
+header .menu__item:not(:last-child) {
+  margin-right: 21px;
+}
+header .menu__link {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 171.4285714286%;
+  letter-spacing: 0.2px;
+  color: #737373;
+}
+@media screen and (max-width: 428px) {
+  header .menu__link {
+    font-size: 18px;
+  }
+}
+
+.main_banner {
+  padding-top: 184px;
+  padding-bottom: 191px;
+  position: relative;
+}
+@media screen and (max-width: 428px) {
+  .main_banner {
+    padding-top: 140px;
+    padding-bottom: 80px;
+  }
+}
+.main_banner article {
+  max-width: 400px;
+  position: relative;
+  z-index: 2;
+}
+@media screen and (max-width: 428px) {
+  .main_banner article {
+    max-width: 300px;
+    margin: auto;
+  }
+}
+.main_banner article > *:not(:last-child) {
+  margin-bottom: 35px;
+}
+.main_banner h1 {
+  font-weight: 800;
+  font-size: 58px;
+  line-height: 137.9310344828%;
+  letter-spacing: 0.2px;
+  color: inherit;
+}
+@media screen and (max-width: 428px) {
+  .main_banner h1 {
+    font-size: 42px;
+  }
+}
+
+.main_banner_text p {
+  font-size: 20px;
+  line-height: 150%;
+  letter-spacing: 0.2px;
+  color: #737373;
+}
+@media screen and (max-width: 428px) {
+  .main_banner_text p {
+    font-size: 16px;
+    color: #525151;
+  }
+}
+
+.main_banner_buttons {
+  display: inline-flex;
+}
+@media screen and (max-width: 428px) {
+  .main_banner_buttons {
+    flex-wrap: wrap;
+    margin: auto;
+  }
+}
+.main_banner_buttons a {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 200%;
+  letter-spacing: 0.2px;
+  padding: 10px 36px;
+  border-radius: 37px;
+  text-align: center;
+}
+@media screen and (max-width: 428px) {
+  .main_banner_buttons a {
+    margin-bottom: 10px;
+    flex: 1 1 100%;
+  }
+}
+.main_banner_buttons a:first-of-type {
+  color: #fff;
+  background-color: #ff7b47;
+  margin-right: 10px;
+}
+@media screen and (max-width: 428px) {
+  .main_banner_buttons a:first-of-type {
+    margin-right: 0;
+  }
+}
+.main_banner_buttons a:first-of-type:hover {
+  background-color: #cc5d31;
+}
+.main_banner_buttons a:last-of-type {
+  color: #0d5c63;
+  background-color: transparent;
+  border: 1px solid #0d5c63;
+}
+.main_banner_buttons a:last-of-type:hover {
+  background-color: rgb(182, 182, 182);
+}
+
+.main_banner_background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: 1;
+}
+@media screen and (max-width: 1300px) {
+  .main_banner_background img {
+    -o-object-position: right;
+       object-position: right;
+  }
+}
+@media screen and (max-width: 992px) {
+  .main_banner_background img {
+    opacity: 0.5;
+  }
+}
