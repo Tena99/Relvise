@@ -18,6 +18,7 @@ $text-color: #737373;
   padding: 0;
   margin: 0;
   border: 0;
+  box-sizing: border-box;
 
   ::before,
   ::after {
@@ -163,7 +164,7 @@ header {
 
   @include max-screen(428px) {
     padding-top: 140px;
-    padding-bottom: 80px;
+    padding-bottom: 140px;
   }
 
   article {
@@ -272,6 +273,86 @@ header {
 
     @include max-screen(992px) {
       opacity: 0.5;
+    }
+  }
+}
+
+//-----Services_section------------------------------------------------------------//
+
+.services_body {
+  margin-top: -111px;
+  position: relative;
+  z-index: 2;
+
+  @media (min-width: 670px) {
+    display: flex;
+    // margin-left: -15px;
+    // margin-right: -15px;
+    flex-wrap: wrap;
+  }
+
+  .services_column {
+    flex: 0 1 33%;
+    padding: 0 15px;
+
+    @include max-screen(992px) {
+      flex: 0 1 50%;
+
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+
+      &:last-child {
+        flex: 0 1 100%;
+      }
+    }
+
+    &:last-child .services_item {
+      background-color: #0d5c63;
+
+      h2 {
+        color: #ffffff;
+      }
+
+      p {
+        color: #ffffff;
+      }
+    }
+  }
+
+  .services_item {
+    background: #ffffff;
+    box-shadow: 0px 13px 19px rgba(0, 0, 0, 0.07);
+    padding: 35px;
+    height: 100%;
+
+    & > *:not(:last-child) {
+      margin-bottom: 10px;
+    }
+
+    .item_services_icon {
+      max-width: 48px;
+
+      img {
+        display: block;
+        width: 100%;
+      }
+    }
+
+    h2 {
+      font-weight: 700;
+      font-size: 24px;
+      line-height: calc(32 / 24 * 100%);
+      letter-spacing: 0.1px;
+      color: #252b42;
+    }
+
+    p {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 20px;
+      letter-spacing: 0.2px;
+      color: #737373;
     }
   }
 }
